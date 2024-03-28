@@ -126,7 +126,12 @@ const messages = [
     "https://cdn.discordapp.com/attachments/1223040868966207684/1223040918714716292/pewkz.gif?ex=6618689e&is=6605f39e&hm=4485a1487b2f169c523fe8dee0f80858f1036eb36ba3e05a97efbb7aac8e112c&",
     "https://cdn.discordapp.com/attachments/1223040868966207684/1223040918320578730/hulk.gif?ex=6618689d&is=6605f39d&hm=5cd25597212995cc831c6b4cbf6bf7fca72a29e8353213821959e7fbcbbafd89&",
     "https://cdn.discordapp.com/attachments/1223040868966207684/1223040919222353970/s.gif?ex=6618689e&is=6605f39e&hm=cf343b2bfa507d1eaa4ab56f186a6e6d9ec496c5657c017a294f810163d86cce&",
-    "pewkz vs vullny"
+    "pewkz vs vullny",
+    "https://media.tenor.com/x51AY1vMF8MAAAAM/femboy.gif WTF IS DATURA DOING",
+    "https://cdn.discordapp.com/attachments/1223040868966207684/1223044222781886554/6gg2i5acwl391.gif?ex=66186bb1&is=6605f6b1&hm=d104fc10754451d3a07b947897bb0b6f92afc8a863c7b1d5b3f63adddf6efa7d&",
+    "https://cdn.discordapp.com/attachments/1223040868966207684/1223045582197887047/2.gif?ex=66186cf5&is=6605f7f5&hm=f474ae176132114bda554711be585c09f6556e264156df26354ad19fd32c79bf&",
+    "https://cdn.discordapp.com/attachments/1223040868966207684/1223045582960984064/3.gif?ex=66186cf6&is=6605f7f6&hm=26bc17d2d531ba3299ec01374e038c9b5588259ffe76c60c6e8a4317127c42d3&",
+    "https://cdn.discordapp.com/attachments/1223040868966207684/1223045583858569216/1.gif?ex=66186cf6&is=6605f7f6&hm=17925658878e1e111d4312a981fb719aab153d1a1ef7ef901572ac545de6422f&"
     
 ];
 
