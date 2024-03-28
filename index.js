@@ -50,35 +50,39 @@ const messages = [
     "hii nigga"
 ];
 
-// Delay between sending messages (in milliseconds)
-const MESSAGE_DELAY = 600000; // 10 minutes
-
 client.once('ready', () => {
     console.log('Bot is ready!');
+    // Start the interval for sending messages
+    sendRandomMessage();
 });
 
-// Function to send a random message after a delay
+client.on('messageCreate', () => {
+    // Reset the interval whenever a message is received
+    resetInterval();
+});
+
 function sendRandomMessage() {
     // Select a random message from the list
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    
-    // Get a random channel from the guilds the bot is in
-    const channel = client.channels.cache.random();
-    
-    // Send the message to the channel
-    if (channel.isText()) {
+    // Get a random delay between 5 to 15 minutes (300,000 to 900,000 milliseconds)
+    const delay = Math.floor(Math.random() * (900000 - 300000 + 1)) + 300000; 
+
+    // Send the random message to a random channel
+    const channel = client.channels.cache.filter(c => c.type === 'GUILD_TEXT').random();
+    if (channel) {
         channel.send(randomMessage)
             .then(() => console.log(`Message sent in ${channel.name}: ${randomMessage}`))
             .catch(error => console.error('Error sending message:', error));
     }
+
+    // Set the timeout for the next message
+    setTimeout(sendRandomMessage, delay);
 }
 
-client.on('messageCreate', message => {
-    // Ignore messages from the bot itself
-    if (message.author.bot) return;
-
-    // Start the timer when a message is received
-    setTimeout(sendRandomMessage, MESSAGE_DELAY);
-});
+function resetInterval() {
+    // Clear the current timeout and reset it to a new interval
+    clearTimeout(sendRandomMessage);
+    sendRandomMessage();
+}
 
 client.login(TOKEN);
