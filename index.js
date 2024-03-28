@@ -97,6 +97,27 @@ const messages = [
     "hiyaaa ^-^",
     "nyaaa",
     "UwU mwuahhh",
+    "https://doxbin.com/upload/party77",
+    "thought id end up with sean but it wasnt a match wrote some songs about ricky now i listen and laugh",
+    "thank you next",
+    "any fuck niggas want beef?",
+    "mr beef🥺 please save us",
+    "catboypablo",
+    "h-hiyaa",
+    "please report user ",
+    "<@692598582271803412> skincare?",
+    "who loves party reply with 👍for yes 👎🏿 for no",
+    "https://www.instagram.com/pabloisoffensive/",
+    "https://media.tenor.com/AD77PAbsKyoAAAAM/gta-gtav.gif",
+    "squirtboypablo",
+    "https://imagedelivery.net/k2DekMlVuWYM0EWSwlREiw/32049c47-8ae9-4ae8-3fb7-15ad0f7cd100/public",
+    "i love anime women i love sigilkore",
+    "- its not sigilkore bro",
+    "zookeeper lore",
+    "footjob",
+    "streaming party on soundcloud",
+    "one time i was outside of micheals craft store and logan paul gave me 23 dollars",
+    "kankan owes me 65 dollars 🥺🥺",
     
 ];
 
@@ -122,7 +143,7 @@ function sendRandomMessage() {
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
     // Find the target channels
-    const targetChannels = client.channels.cache.filter(channel => ['gen', 'chat', 'general'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
+    const targetChannels = client.channels.cache.filter(channel => ['gen', 'chat', 'general', 'main', 'talk', 'main chat'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
     
     // Send the random message to each target channel
     targetChannels.forEach(channel => {
@@ -132,7 +153,7 @@ function sendRandomMessage() {
     });
 
     // Get a random delay between 5 to 15 minutes (300,000 to 900,000 milliseconds)
-    const delay = Math.floor(Math.random() * (900000 - 300000 + 1)) + 300000;
+    const delay = Math.floor(Math.random() * (900000 - 500000 + 1)) + 500000;
     
     // Set the timeout for the next message
     setTimeout(sendRandomMessage, delay);
