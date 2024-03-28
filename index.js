@@ -117,7 +117,16 @@ const messages = [
     "footjob",
     "streaming party on soundcloud",
     "one time i was outside of micheals craft store and logan paul gave me 23 dollars",
-    "kankan owes me 65 dollars 🥺🥺",
+    "that nigga kankan owes me 65 dollars 🥺🥺",
+    "https://www.theadminzone.com/data/assets/logo/taz_logo_v2.png",
+    "fat hacker nigga found dead age 23",
+    "☜👍  𝓕𝓤ℂҜ ｎｉ𝕘𝔤ค  👺💢",
+    "https://soundcloud.com/cryinginpain/pewkz-tried-2-make-song-whata-bozo",
+    "pewkz archive",
+    "https://cdn.discordapp.com/attachments/1223040868966207684/1223040918714716292/pewkz.gif?ex=6618689e&is=6605f39e&hm=4485a1487b2f169c523fe8dee0f80858f1036eb36ba3e05a97efbb7aac8e112c&",
+    "https://cdn.discordapp.com/attachments/1223040868966207684/1223040918320578730/hulk.gif?ex=6618689d&is=6605f39d&hm=5cd25597212995cc831c6b4cbf6bf7fca72a29e8353213821959e7fbcbbafd89&",
+    "https://cdn.discordapp.com/attachments/1223040868966207684/1223040919222353970/s.gif?ex=6618689e&is=6605f39e&hm=cf343b2bfa507d1eaa4ab56f186a6e6d9ec496c5657c017a294f810163d86cce&",
+    "pewkz vs vullny"
     
 ];
 
