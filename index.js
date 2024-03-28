@@ -168,8 +168,8 @@ function sendRandomMessage() {
         .then(() => console.log(`Message sent in ${targetChannel.name}: ${randomMessage}`))
         .catch(error => console.error('Error sending message:', error));
 
-    // Get a random delay between 30 to 60 minutes (1,800,000 to 3,600,000 milliseconds)
-    const delay = Math.floor(Math.random() * (3600000 - 1800000 + 1)) + 1800000;
+    // Get a random delay
+    const delay = Math.floor(Math.random() * (360000 - 180000 + 1)) + 180000;
     
     // Set the timeout for the next message
     setTimeout(sendRandomMessage, delay);
