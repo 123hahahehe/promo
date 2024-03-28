@@ -102,6 +102,9 @@ const messages = [
 
 client.once('ready', () => {
     console.log('Bot is ready!');
+ client.user.setPresence({ 
+    status: 'idle' 
+});
     // Start the interval for sending messages
     sendRandomMessage();
 });
