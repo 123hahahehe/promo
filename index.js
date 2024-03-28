@@ -131,7 +131,10 @@ const messages = [
     "https://cdn.discordapp.com/attachments/1223040868966207684/1223044222781886554/6gg2i5acwl391.gif?ex=66186bb1&is=6605f6b1&hm=d104fc10754451d3a07b947897bb0b6f92afc8a863c7b1d5b3f63adddf6efa7d&",
     "https://cdn.discordapp.com/attachments/1223040868966207684/1223045582197887047/2.gif?ex=66186cf5&is=6605f7f5&hm=f474ae176132114bda554711be585c09f6556e264156df26354ad19fd32c79bf&",
     "https://cdn.discordapp.com/attachments/1223040868966207684/1223045582960984064/3.gif?ex=66186cf6&is=6605f7f6&hm=26bc17d2d531ba3299ec01374e038c9b5588259ffe76c60c6e8a4317127c42d3&",
-    "https://cdn.discordapp.com/attachments/1223040868966207684/1223045583858569216/1.gif?ex=66186cf6&is=6605f7f6&hm=17925658878e1e111d4312a981fb719aab153d1a1ef7ef901572ac545de6422f&"
+    "https://cdn.discordapp.com/attachments/1223040868966207684/1223045583858569216/1.gif?ex=66186cf6&is=6605f7f6&hm=17925658878e1e111d4312a981fb719aab153d1a1ef7ef901572ac545de6422f&",
+    "oh datura i wish to feel as tough as you after you quote your daddy tate",
+    "grand master datura",
+    "imar fucking gaspar"
     
 ];
 
