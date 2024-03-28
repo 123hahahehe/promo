@@ -56,25 +56,31 @@ client.once('ready', () => {
     sendRandomMessage();
 });
 
-client.on('messageCreate', () => {
-    // Reset the interval whenever a message is received
+client.on('messageCreate', message => {
+    // Ignore messages from the bot itself and messages not in the specified channels
+    if (message.author.bot || !['gen', 'chat', 'general'].includes(message.channel.name.toLowerCase())) return;
+
+    // Reset the interval whenever a message is received in the target channels
     resetInterval();
 });
 
 function sendRandomMessage() {
     // Select a random message from the list
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    // Get a random delay between 5 to 15 minutes (300,000 to 900,000 milliseconds)
-    const delay = Math.floor(Math.random() * (900000 - 300000 + 1)) + 300000; 
 
-    // Send the random message to a random channel
-    const channel = client.channels.cache.filter(c => c.type === 'GUILD_TEXT').random();
-    if (channel) {
+    // Find the target channels
+    const targetChannels = client.channels.cache.filter(channel => ['gen', 'chat', 'general'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
+    
+    // Send the random message to each target channel
+    targetChannels.forEach(channel => {
         channel.send(randomMessage)
             .then(() => console.log(`Message sent in ${channel.name}: ${randomMessage}`))
             .catch(error => console.error('Error sending message:', error));
-    }
+    });
 
+    // Get a random delay between 5 to 15 minutes (300,000 to 900,000 milliseconds)
+    const delay = Math.floor(Math.random() * (900000 - 300000 + 1)) + 300000;
+    
     // Set the timeout for the next message
     setTimeout(sendRandomMessage, delay);
 }
