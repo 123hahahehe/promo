@@ -1,7 +1,7 @@
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-// Your bot token obtained from Replit Secrets
+// secrets
 const TOKEN = process.env.TOKEN;
 
 // List of messages the bot can choose from
