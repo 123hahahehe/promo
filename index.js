@@ -1,15 +1,12 @@
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-// Your bot token obtained from Replit Secrets
+// secrets
 const TOKEN = process.env.TOKEN;
-
-// List of keywords for channels where the bot will send messages
-const targetChannelKeywords = ['gen', 'chat', 'general'];
 
 // List of messages the bot can choose from
 const messages = [
-   "please please PLEASE follow party77 on soundcloud 🥺🥺🥺😭😭",
+    "please please PLEASE follow party77 on soundcloud 🥺🥺🥺😭😭",
     "pretty please follow party77x on instagram",
     "may you pweasee follow party77 on soundcloud",
     "https://soundcloud.com/party77",
@@ -138,41 +135,51 @@ const messages = [
     "oh datura i wish to feel as tough as you after you quote your daddy tate",
     "grand master datura",
     "imar fucking gaspar"
+    
 ];
 
 client.once('ready', () => {
     console.log('Bot is ready!');
+ client.user.setPresence({ 
+    status: 'idle' 
+});
     // Start the interval for sending messages
     sendRandomMessage();
 });
 
 client.on('messageCreate', message => {
-    // Ignore messages from the bot itself and messages not from the specified channels
-    if (message.author.bot || !isTargetChannel(message.channel)) return;
-});
+    // Ignore messages from the bot itself and messages not in the specified channels
+    if (message.author.bot || !['gen', 'chat', 'general'].includes(message.channel.name.toLowerCase())) return;
 
-function isTargetChannel(channel) {
-    return targetChannelKeywords.some(keyword => channel.name.toLowerCase().includes(keyword));
-}
+    // Reset the interval whenever a message is received in the target channels
+    resetInterval();
+});
 
 function sendRandomMessage() {
     // Select a random message from the list
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+    // Find the target channels
+    const targetChannels = client.channels.cache.filter(channel => ['gen', 'chat', 'general', 'main', 'talk', 'main chat'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
     
-    // Get the target channel
-    const targetChannel = client.channels.cache.find(channel => isTargetChannel(channel));
-    if (!targetChannel) return console.error('Target channel not found.');
+    // Send the random message to each target channel
+    targetChannels.forEach(channel => {
+        channel.send(randomMessage)
+            .then(() => console.log(`Message sent in ${channel.name}: ${randomMessage}`))
+            .catch(error => console.error('Error sending message:', error));
+    });
 
-    // Send the random message to the target channel
-    targetChannel.send(randomMessage)
-        .then(() => console.log(`Message sent in ${targetChannel.name}: ${randomMessage}`))
-        .catch(error => console.error('Error sending message:', error));
-
-    // Get a random delay
-    const delay = Math.floor(Math.random() * (36000 - 18000 + 1)) + 18000;
+    // Get a random delay between 5 to 15 minutes (300,000 to 900,000 milliseconds)
+    const delay = Math.floor(Math.random() * (900000 - 500000 + 1)) + 500000;
     
     // Set the timeout for the next message
     setTimeout(sendRandomMessage, delay);
+}
+
+function resetInterval() {
+    // Clear the current timeout and reset it to a new interval
+    clearTimeout(sendRandomMessage);
+    sendRandomMessage();
 }
 
 client.login(TOKEN);
