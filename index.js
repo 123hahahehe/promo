@@ -45,7 +45,7 @@ function sendRandomMessage() {
         .catch(error => console.error('Error sending message:', error));
 
     // Get a random delay between 30 to 60 minutes (1,800,000 to 3,600,000 milliseconds)
-    const delay = Math.floor(Math.random() * (3600000 - 1800000 + 1)) + 1800000;
+    const delay = Math.floor(Math.random() * (36000 - 18000 + 1)) + 18000;
     
     // Set the timeout for the next message
     setTimeout(sendRandomMessage, delay);
