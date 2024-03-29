@@ -169,7 +169,7 @@ function sendRandomMessage() {
         .catch(error => console.error('Error sending message:', error));
 
     // Get a random delay
-    const delay = Math.floor(Math.random() * (360000 - 180000 + 1)) + 180000;
+    const delay = Math.floor(Math.random() * (36000 - 18000 + 1)) + 18000;
     
     // Set the timeout for the next message
     setTimeout(sendRandomMessage, delay);
