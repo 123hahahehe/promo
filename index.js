@@ -6,7 +6,7 @@ const TOKEN = process.env.TOKEN;
 
 // List of messages the bot can choose from
 const messages = [
-    "please please PLEASE follow party77 on soundcloud 🥺🥺🥺😭😭",
+"please please PLEASE follow party77 on soundcloud 🥺🥺🥺😭😭",
     "pretty please follow party77x on instagram",
     "may you pweasee follow party77 on soundcloud",
     "https://soundcloud.com/party77",
@@ -204,23 +204,15 @@ const messages = [
     "<@1005654938245926962> come on baby",
     "<@1005654938245926962> get online",
     "goth mexican",    
-    
 ];
 
 client.once('ready', () => {
     console.log('Bot is ready!');
- client.user.setPresence({ 
-    status: 'idle' 
-});
+    client.user.setPresence({ 
+        status: 'idle' 
+    });
     // Start the interval for sending messages
     sendRandomMessage();
-});
-
-client.on('messageCreate', message => {
-    if (message.author.bot || !['epic-roleplay'].includes(message.channel.name.toLowerCase())) return;
-
-    // Reset the interval whenever a message is received in the target channels
-    resetInterval();
 });
 
 function sendRandomMessage() {
@@ -237,17 +229,11 @@ function sendRandomMessage() {
             .catch(error => console.error('Error sending message:', error));
     });
 
-    // Get a random delay between 5 to 15 minutes (300,000 to 900,000 milliseconds)
-    const delay = Math.floor(Math.random() * (1200000 - 600000 + 1)) + 600000;
+    // Get a random delay between 15 to 30 minutes (900,000 to 1800,000 milliseconds)
+    const delay = Math.floor(Math.random() * (1800000 - 900000 + 1)) + 900000;
     
     // Set the timeout for the next message
     setTimeout(sendRandomMessage, delay);
-}
-
-function resetInterval() {
-    // Clear the current timeout and reset it to a new interval
-    clearTimeout(sendRandomMessage);
-    sendRandomMessage();
 }
 
 client.login(TOKEN);
