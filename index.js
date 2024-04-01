@@ -141,7 +141,13 @@ const messages = [
     "im too addicted to this rapping stuff",
     "you cant rap as much as me",
     "cap rap",
-    "yadda yadda"
+    "yadda yadda",
+    "im so tiredddddddd",
+    "i never wear shoes outside",
+    "bruh",
+    "nigga",
+    "https://c.tenor.com/oMtGf2HXOcAAAAAC/tenor.gif",
+        
     
 ];
 
