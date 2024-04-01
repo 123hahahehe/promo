@@ -148,8 +148,7 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', message => {
-    // Ignore messages from the bot itself and messages not in the specified channels
-    if (message.author.bot || !['gen', 'chat', 'general'].includes(message.channel.name.toLowerCase())) return;
+    if (message.author.bot || !['epic-roleplay'].includes(message.channel.name.toLowerCase())) return;
 
     // Reset the interval whenever a message is received in the target channels
     resetInterval();
@@ -160,7 +159,7 @@ function sendRandomMessage() {
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
     // Find the target channels
-    const targetChannels = client.channels.cache.filter(channel => ['epic-roleplay'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
+    const targetChannels = client.channels.cache.filter(channel => ['gen', 'chat', 'general', 'main', 'talk', 'main chat'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
     
     // Send the random message to each target channel
     targetChannels.forEach(channel => {
