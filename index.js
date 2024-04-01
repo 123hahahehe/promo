@@ -134,7 +134,14 @@ const messages = [
     "https://cdn.discordapp.com/attachments/1223040868966207684/1223045583858569216/1.gif?ex=66186cf6&is=6605f7f6&hm=17925658878e1e111d4312a981fb719aab153d1a1ef7ef901572ac545de6422f&",
     "oh datura i wish to feel as tough as you after you quote your daddy tate",
     "grand master datura",
-    "imar fucking gaspar"
+    "imar fucking gaspar",
+    "i cant stop fucking rapping",
+    "please help me stop rapping",
+    "i love rapping i could never quit".
+    "im addicted to this rapping stuff",
+    "you cant rap as much as me",
+    "cap rap",
+    "yadda yadda"
     
 ];
 
