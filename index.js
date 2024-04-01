@@ -161,31 +161,5 @@ client.on('messageCreate', message => {
     resetInterval();
 });
 
-function sendRandomMessage() {
-    // Select a random message from the list
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-
-    // Find the target channels
-    const targetChannels = client.channels.cache.filter(channel => ['epic-roleplay'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
-    
-    // Send the random message to each target channel
-    targetChannels.forEach(channel => {
-        channel.send(randomMessage)
-            .then(() => console.log(`Message sent in ${channel.name}: ${randomMessage}`))
-            .catch(error => console.error('Error sending message:', error));
-    });
-
-    // Get a random delay between 5 to 15 minutes (300,000 to 900,000 milliseconds)
-    const delay = Math.floor(Math.random() * (900000 - 500000 + 1)) + 500000;
-    
-    // Set the timeout for the next message
-    setTimeout(sendRandomMessage, delay);
-}
-
-function resetInterval() {
-    // Clear the current timeout and reset it to a new interval
-    clearTimeout(sendRandomMessage);
-    sendRandomMessage();
-}
 
 client.login(TOKEN);
