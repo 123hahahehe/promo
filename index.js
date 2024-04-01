@@ -137,8 +137,8 @@ const messages = [
     "imar fucking gaspar",
     "i cant stop fucking rapping",
     "please help me stop rapping",
-    "i love rapping i could never quit".
-    "who loves to do this rapping stuff",
+    "i love rapping i could never quit",
+    "im too addicted to this rapping stuff",
     "you cant rap as much as me",
     "cap rap",
     "yadda yadda"
