@@ -160,7 +160,7 @@ function sendRandomMessage() {
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
     // Find the target channels
-    const targetChannels = client.channels.cache.filter(channel => ['gen', 'chat', 'general', 'main', 'talk', 'main chat'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
+    const targetChannels = client.channels.cache.filter(channel => ['epic-roleplay'].includes(channel.name.toLowerCase()) && channel.type === 'GUILD_TEXT');
     
     // Send the random message to each target channel
     targetChannels.forEach(channel => {
