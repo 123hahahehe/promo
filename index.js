@@ -238,7 +238,7 @@ function sendRandomMessage() {
     });
 
     // Get a random delay between 5 to 15 minutes (300,000 to 900,000 milliseconds)
-    const delay = Math.floor(Math.random() * (900000 - 500000 + 1)) + 500000;
+    const delay = Math.floor(Math.random() * (1200000 - 600000 + 1)) + 600000;
     
     // Set the timeout for the next message
     setTimeout(sendRandomMessage, delay);
